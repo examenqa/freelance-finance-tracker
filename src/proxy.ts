@@ -7,7 +7,7 @@ export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 }
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const basicAuth = request.headers.get('authorization')
 
   if (basicAuth) {
